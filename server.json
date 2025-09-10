@@ -1,5 +1,28 @@
 {
   "users": [
-    { "id": 1, "name": "Rafael Lang" }
+    {
+      "id": 123,
+      "name": "Rafael Lang",
+      "username": "rafaellang1",
+      "blocked": false
+    },
+    {
+      "id": 1234,
+      "name": "Guilherme Vieira",
+      "username": "viieiiragui",
+      "blocked": false
+    },
+    {
+      "id": 12345,
+      "name": "Mateus Silva",
+      "username": "maateusilva",
+      "blocked": false
+    },
+    {
+      "id": 123456,
+      "name": "Rodrigo costa",
+      "username": "costarodrigo22",
+      "blocked": true
+    }
   ]
 }

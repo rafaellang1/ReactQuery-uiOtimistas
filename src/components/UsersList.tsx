@@ -1,30 +1,32 @@
+import { userUsers } from '@/app/hooks/useUsers';
 import { Avatar, AvatarImage, AvatarFallback } from './ui/Avatar';
-import { Switch } from './ui/switch';
+import { Switch } from './ui/Switch';
 
-const users = [
-  {
-    id: Math.random(),
-    name: 'Rafael Lang',
-    username: 'rafaellang1',
-  },
-  {
-    id: Math.random(),
-    name: 'Guilherme Vieira',
-    username: 'viieiiragui',
-  },
-  {
-    id: Math.random(),
-    name: 'Mateus Silva',
-    username: 'maateusilva',
-  },
-  {
-    id: Math.random(),
-    name: 'Rodrigo costa',
-    username: 'costarodrigo22',
-  },
-];
+// const users = [
+// {
+//     id: Math.random(),
+//     name: 'Rafael Lang',
+//     username: 'rafaellang1',
+//   },
+//   {
+//     id: Math.random(),
+//     name: 'Guilherme Vieira',
+//     username: 'viieiiragui',
+//   },
+//   {
+//     id: Math.random(),
+//     name: 'Mateus Silva',
+//     username: 'maateusilva',
+//   },
+//   {
+//     id: Math.random(),
+//     name: 'Rodrigo costa',
+//     username: 'costarodrigo22',
+//   },
+// ];
 
 export function UsersList() {
+  const { users } = userUsers();
   return (
     <div>
       <h1 className='mb-2'>Lista de Usuários</h1>

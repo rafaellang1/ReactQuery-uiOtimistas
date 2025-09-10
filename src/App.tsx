@@ -1,10 +1,15 @@
+import { QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+
 import { ThemeProvider } from '@/app/contexts/ThemeContext';
 import { Header } from './components/Header';
 import { UsersList } from './components/UsersList';
 import { UserForm } from './components/UserForm';
+import { queryClient } from './app/lib/queryClient';
 
 export function App() {
   return (
+    <QueryClientProvider client={queryClient}>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <div className='max-w-[500px] mx-auto mt-20 '>
           <Header />
@@ -14,8 +19,8 @@ export function App() {
           <UsersList />
         </main>
         </div>
-
       </ThemeProvider>
-
+      <ReactQueryDevtools />
+    </QueryClientProvider>
   );
 }
