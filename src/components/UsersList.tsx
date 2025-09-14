@@ -1,6 +1,7 @@
 import { userUsers } from '@/app/hooks/useUsers';
 import { Avatar, AvatarImage, AvatarFallback } from './ui/Avatar';
 import { Switch } from './ui/Switch';
+import { Skeleton } from './ui/skeleton';
 
 // const users = [
 // {
@@ -26,11 +27,20 @@ import { Switch } from './ui/Switch';
 // ];
 
 export function UsersList() {
-  const { users } = userUsers();
+  const { users, isLoading } = userUsers();
+
   return (
     <div>
       <h1 className='mb-2'>Lista de Usuários</h1>
         <div className='space-y-4'>
+          {isLoading && (
+            <>
+              <Skeleton className='h-18 w-full rounded-md' />
+              <Skeleton className='h-18 w-full rounded-md' />
+              <Skeleton className='h-18 w-full rounded-md' />
+              <Skeleton className='h-18 w-full rounded-md' />
+            </>
+          )}
           {users.map(user => (
             <div
               key={user.id}

@@ -6,6 +6,7 @@ import { Header } from './components/Header';
 import { UsersList } from './components/UsersList';
 import { UserForm } from './components/UserForm';
 import { queryClient } from './app/lib/queryClient';
+import { Toaster } from './components/ui/Toaster';
 
 export function App() {
   return (
@@ -19,6 +20,8 @@ export function App() {
           <UsersList />
         </main>
         </div>
+
+        <Toaster />
       </ThemeProvider>
       <ReactQueryDevtools />
     </QueryClientProvider>

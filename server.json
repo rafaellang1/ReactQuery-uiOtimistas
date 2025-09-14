@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "id": 123,
-      "name": "Rafael Lang",
-      "username": "rafaellang1",
-      "blocked": false
-    },
-    {
       "id": 1234,
       "name": "Guilherme Vieira",
       "username": "viieiiragui",
@@ -23,6 +17,12 @@
       "name": "Rodrigo costa",
       "username": "costarodrigo22",
       "blocked": true
+    },
+    {
+      "id": "8a88",
+      "name": "Rafael",
+      "username": "rafaellang1",
+      "blocked": false
     }
   ]
 }
